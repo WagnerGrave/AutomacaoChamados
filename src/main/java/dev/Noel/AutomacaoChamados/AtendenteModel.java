@@ -9,9 +9,9 @@ import jakarta.persistence.Table;
 public class AtendenteModel {
 
     @Id
-    int AtentendeteId;
-    String Nome;
-    String Cargo;
+    private int AtentendeteId;
+    private String Nome;
+    private String Cargo;
 
 
     public AtendenteModel() {
@@ -19,9 +19,9 @@ public class AtendenteModel {
     }
 
     public AtendenteModel(String nome, String cargo, int atentendeteId) {
-        Nome = nome;
-        Cargo = cargo;
-        AtentendeteId = atentendeteId;
+        this.Nome = nome;
+        this.Cargo = cargo;
+        this.AtentendeteId = atentendeteId;
     }
 
     public String getNome() {
