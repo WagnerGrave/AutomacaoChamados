@@ -1,4 +1,4 @@
-package dev.Noel.AutomacaoChamados;
+package dev.Noel.AutomacaoChamados.Atendentes;
 
 
 import org.springframework.web.bind.annotation.GetMapping;

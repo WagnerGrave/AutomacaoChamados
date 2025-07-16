@@ -1,24 +1,29 @@
-package dev.Noel.AutomacaoChamados;
+package dev.Noel.AutomacaoChamados.Atendentes;
 
+import dev.Noel.AutomacaoChamados.Cargos.CargosModel;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
+
+import java.util.List;
+import java.util.UUID;
 
 @Entity
 @Table(name = "tb_cadastro_atendentes")
 public class AtendenteModel {
 
     @Id
-    private int AtentendeteId;
+    private UUID AtentendeteId;
     private String Nome;
     private String Cargo;
+    private List<CargosModel> cargos;
 
 
     public AtendenteModel() {
 
     }
 
-    public AtendenteModel(String nome, String cargo, int atentendeteId) {
+    public AtendenteModel(String nome, String cargo, UUID atentendeteId) {
         this.Nome = nome;
         this.Cargo = cargo;
         this.AtentendeteId = atentendeteId;
@@ -32,7 +37,7 @@ public class AtendenteModel {
         return Cargo;
     }
 
-    public int getAtentendeteId() {
+    public UUID getAtentendeteId() {
         return AtentendeteId;
     }
 
@@ -44,7 +49,7 @@ public class AtendenteModel {
         Cargo = cargo;
     }
 
-    public void setAtentendeteId(int atentendeteId) {
+    public void setAtentendeteId(UUID atentendeteId) {
         AtentendeteId = atentendeteId;
     }
 
